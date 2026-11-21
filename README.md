@@ -5,7 +5,7 @@ documents, procedures, and concepts.
 
 ## Install (each teammate)
 
-    /plugin marketplace add Blackbaud-VishnuVardhanReddyManikonda/learn-marketplace
+    /plugin marketplace add Blackbaud-VishnuVardhanReddyManikonda/vishnu-skills
 
 Then install the `learn` plugin from the `vishnu-skills` marketplace, and run
 the skill as `/learn:learn <topic>`.
@@ -20,12 +20,12 @@ Add this to `.gitignore` so private learning progress is not committed:
 
 From inside that repo, run once, then commit the `.claude/settings.json` it writes:
 
-    claude plugin marketplace add Blackbaud-VishnuVardhanReddyManikonda/learn-marketplace --scope project
+    claude plugin marketplace add Blackbaud-VishnuVardhanReddyManikonda/vishnu-skills --scope project
 
 ## Before publishing
 
-    claude plugin validate ./learn-marketplace
-    claude plugin validate ./learn-marketplace/plugins/learn
+    claude plugin validate ./vishnu-skills
+    claude plugin validate ./plugins/learn
 
 Then add the marketplace from the local folder and test with TESTING.md.
 
