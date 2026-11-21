@@ -1,4 +1,4 @@
-# team-learning marketplace
+# visnu-skills
 
 Contains one plugin, `learn`: a teaching skill for code changes, code areas,
 documents, procedures, and concepts.
@@ -7,7 +7,7 @@ documents, procedures, and concepts.
 
     /plugin marketplace add Blackbaud-VishnuVardhanReddyManikonda/learn-marketplace
 
-Then install the `learn` plugin from the `team-learning` marketplace, and run
+Then install the `learn` plugin from the `visnu-skills` marketplace, and run
 the skill as `/learn:learn <topic>`.
 
 ## Once per repo where you use it
