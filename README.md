@@ -5,7 +5,7 @@ documents, procedures, and concepts.
 
 ## Install (each teammate)
 
-    /plugin marketplace add <your-org>/<this-repo>
+    /plugin marketplace add Blackbaud-VishnuVardhanReddyManikonda/learn-marketplace
 
 Then install the `learn` plugin from the `team-learning` marketplace, and run
 the skill as `/learn:learn <topic>`.
@@ -20,7 +20,7 @@ Add this to `.gitignore` so private learning progress is not committed:
 
 From inside that repo, run once, then commit the `.claude/settings.json` it writes:
 
-    claude plugin marketplace add <your-org>/<this-repo> --scope project
+    claude plugin marketplace add Blackbaud-VishnuVardhanReddyManikonda/learn-marketplace --scope project
 
 ## Before publishing
 
