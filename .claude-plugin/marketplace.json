@@ -1,0 +1,15 @@
+{
+  "name": "team-learning",
+  "description": "A teaching skill that learns a topic from real sources, finds what you already know, and teaches the gaps",
+  "owner": {
+    "name": "Vishnu Vardhan Reddy Manikonda"
+  },
+  "plugins": [
+    {
+      "name": "learn",
+      "source": "./plugins/learn",
+      "description": "Teaches any code change, codebase area, document, procedure or concept step by step, adapting to what the learner already knows",
+      "version": "1.0.0"
+    }
+  ]
+}

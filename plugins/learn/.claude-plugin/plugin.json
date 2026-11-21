@@ -1,0 +1,8 @@
+{
+  "name": "learn",
+  "version": "1.0.0",
+  "description": "A senior-engineer teacher: researches a topic from verified sources, diagnoses what the learner knows, and teaches only the gaps until they can explain it themselves",
+  "author": {
+    "name": "Vishnu Vardhan Reddy Manikonda"
+  }
+}
