@@ -45,7 +45,9 @@ misconception. Never use an analogy in place of the precise explanation.
 
 ## Designing the check
 
-- Ask at the right level: after a first explanation, L2 or L3 (see the ladder).
+- Ask at the right level: after a first explanation, an L2 question; then, in a
+  later turn, an L3 question in a new situation. The mastery sequence in the
+  ladder file decides the order and what counts as `solid`.
 - Change the surface of the question so it cannot be answered by echoing your
   wording. Use different names, a different input, or a nearby situation.
 - Keep it answerable in a few sentences.

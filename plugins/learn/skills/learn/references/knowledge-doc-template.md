@@ -12,7 +12,7 @@ Contents: template, citation rules, staleness check.
 ---
 topic: <human-readable topic>
 slug: <slug>
-verified_at_commit: <output of git rev-parse HEAD>
+verified_at_commit: <output of git rev-parse HEAD, or "none" outside a git repo>
 generated: <date>
 sources:
   - <path or glob the doc depends on>
@@ -84,12 +84,24 @@ repo with `path:line`, and why it works this way.>
 - If a comment or doc contradicts the code, cite both and state that the code wins.
 - Do not write claims you cannot trace. Move them to **Unverified**.
 
+## Never put sensitive data in the doc
+
+The doc may be shared later, so keep it clean from the start.
+
+- Never write secrets, credentials, tokens, keys, connection strings, customer or
+  personal data, or internal hostnames and URLs into the doc, even in a short quote.
+- Cite `path:line` instead of quoting the value.
+- If you find a secret in the code, tell the learner once in chat that it exists
+  and where, without repeating the value, and leave it out of the doc.
+
 ## Staleness check (when a doc already exists)
 
-1. Read `verified_at_commit` and `sources` from the frontmatter. (If the topic
-   has no repo files, for example a pure concept from web docs, check whether
-   the cited pages or the version in use have changed, and re-verify the claims
-   that depend on them.)
+1. Read `verified_at_commit` and `sources` from the frontmatter. If it is
+   `none` (no git repo, or a topic with no repo files such as a pure concept
+   from web docs), skip the git steps below. Use the `generated` date instead:
+   re-open the cited official pages, check whether they or the version in use
+   have changed, and re-verify the claims that depend on them. Treat a doc older
+   than about 6 months as needing a refresh. Then go to step 5.
 2. Run `git diff --stat <verified_at_commit>..HEAD -- <each source path>`.
 3. Decide:
    - **No changes in sources:** reuse the doc as is. Tell the learner it is current.
@@ -99,4 +111,5 @@ repo with `path:line`, and why it works this way.>
 4. If the commit hash no longer exists (history rewritten), rebuild.
 5. Tell the learner in one line what you decided and why.
 
-After any update, set `verified_at_commit` to the current `git rev-parse HEAD`.
+After any update, set `verified_at_commit` to the current `git rev-parse HEAD`
+(or leave it `none` outside a git repo) and update `generated`.

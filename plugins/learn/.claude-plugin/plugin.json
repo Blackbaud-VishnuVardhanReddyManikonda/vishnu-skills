@@ -4,5 +4,7 @@
   "description": "A senior-engineer teacher: researches a topic from verified sources, diagnoses what the learner knows, and teaches only the gaps until they can explain it themselves",
   "author": {
     "name": "Vishnu Vardhan Reddy Manikonda"
-  }
+  },
+  "repository": "https://github.com/Blackbaud-VishnuVardhanReddyManikonda/vishnu-skills",
+  "keywords": ["learning", "teaching", "onboarding", "education"]
 }

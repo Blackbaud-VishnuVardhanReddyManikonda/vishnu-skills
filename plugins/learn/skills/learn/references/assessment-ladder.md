@@ -22,6 +22,60 @@ harder tasks, so you learn how deep their knowledge goes with few questions.
 
 Ask L3 and above to decide `solid`. L1 and L2 alone can be memorized.
 
+## The mastery sequence: from taught to solid
+
+Every concept follows the same path. This is what keeps a concept from sitting at
+L2 forever, or being marked `solid` after a recalled answer.
+
+| Step | You do | Result |
+|---|---|---|
+| 1. Teach | One chunk (see the playbook) | `seen` |
+| 2. Entry check | One L2 question. For a beginner who said "nothing", L1 is fine as the very first check | Pass: `shaky`. Fail: go to **When a check fails** |
+| 3. Proof check | In a **later turn**, one L3 question in a **new situation** | Pass without hints: `solid`. Fail: go to **When a check fails** |
+| 4. Stretch (optional) | L4 on failure-heavy concepts, L5 in the closing | Strengthens evidence; never required for `solid` |
+
+Rules that make the sequence trustworthy:
+
+- **L3 must be fresh.** Use different names, inputs, or a nearby scenario from the
+  one you taught with. If the learner could answer by repeating your last chunk,
+  it is an L2 question, not L3.
+- **L3 goes in a later turn, not the same turn as the teaching.** Teach, ask L2,
+  and only after a pass ask L3. An answer given right after you stated it proves
+  short-term memory only.
+- **Start where the evidence already is.** If Phase 4 already gave an unassisted
+  L3 pass on this concept, mark it `solid` and skip teaching. If the learner
+  passed L2 in diagnosis, go straight to the L3 proof check. Never repeat a
+  check they already passed.
+- **Experienced learners skip step 2.** Open with L3. A pass means `solid`;
+  a miss means teach the gap, then continue from step 2.
+- **"Correct but shallow" is not a pass.** Ask "why?" once. If the reasoning is
+  still missing, treat it as partial.
+- **No hints in a passing answer.** If you used a rung of the hint ladder before
+  the answer, the pass counts as L2 evidence at most: status stays `shaky`.
+- **Record the level every time.** The evidence log line names the level, the
+  result, and whether hints were used. A status change with no such line is not
+  allowed.
+
+### When a check fails
+
+- **Fail at L2 (step 2):** use the hint ladder, re-teach the missing piece from a
+  different angle, and re-check with a rephrased L2 question.
+- **Fail at L3 (step 3):** the concept is `shaky`, not lost. Name the one thing
+  the answer missed, re-teach just that piece, then ask a **different** L3 question
+  in another situation. Never re-ask the same L3 question word for word.
+- **Two failed attempts at the same level:** stop and step back to a prerequisite
+  concept. Do not push a third time.
+- **Session cap:** at most 4 questions on one concept in one session. If it is
+  still not `solid`, mark it `shaky`, record where it stuck in the progress
+  file's notes, move on, and let spaced recall or the next session retry it.
+  A learner who has been quizzed to exhaustion learns nothing more.
+
+### After `solid`
+
+`solid` is not permanent. Spaced recall (see the playbook) re-tests it in a new
+situation. One wrong answer drops it to `shaky`. One unassisted pass in a new
+situation keeps it `solid` and can promote a hint-assisted `shaky`.
+
 ## Writing a probe
 
 1. Write the **answer key first**: the 2 to 4 points a good answer contains and
@@ -54,7 +108,8 @@ unknown -> seen -> shaky -> solid          (misconception is a flag, not a statu
 
 - `unknown`: nothing demonstrated.
 - `seen`: you taught it but have not checked yet.
-- `shaky`: some understanding shown, with gaps.
+- `shaky`: passed an L2 check, or showed partial or hint-assisted understanding.
+  Not yet proven at L3.
 - `solid`: passed an L3 or higher probe, without hints, on a question whose
   answer was not handed to them in your last message.
 - Self-report ("yeah, I get it") never changes a status.

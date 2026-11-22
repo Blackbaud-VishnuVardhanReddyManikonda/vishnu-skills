@@ -5,12 +5,13 @@ has pass checks; any "fail signal" means the skill text needs tightening.
 
 ## Install
 
-Copy the `learn/` folder to `.claude/skills/learn/` in the repo (or
-`~/.claude/skills/learn/` for personal use), then run `/learn <topic>`.
+Add the marketplace and install the plugin (see README.md), or for local
+testing run `/plugin marketplace add ./` from this repo's root. Then run
+`/learn:learn <topic>`.
 
 ## Scenario 1: Total beginner
 
-Prompt: `/learn <a real recent PR>`. When asked, answer "Nothing, I'm new to this."
+Prompt: `/learn:learn <a real recent PR>`. When asked, answer "Nothing, I'm new to this."
 
 Pass:
 - Explored first (subagents or inline), knowledge doc written to `docs/learning/`
@@ -24,7 +25,7 @@ before checking, says "Great!" to a weak answer.
 
 ## Scenario 2: Partial knower with a planted misconception
 
-Prompt: `/learn <a migration>`. Say you know a bit, then confidently state
+Prompt: `/learn:learn <a migration>`. Say you know a bit, then confidently state
 something **wrong** about it (for example, a wrong step order).
 
 Pass:
@@ -66,21 +67,21 @@ different form, or explains that it needs to see the reasoning.
 ## Scenario 6: Stop and resume
 
 Stop mid-session ("I need to go"), then start a new session and run the same
-`/learn <topic>`.
+`/learn:learn <topic>`.
 
 Pass: reads progress, runs staleness check, states where you stopped, begins with
 one spaced-recall warm-up, continues from `resume_at`.
 
 ## Scenario 7: Stale doc
 
-Change a file the doc cites (in a scratch branch), then run `/learn` again.
+Change a file the doc cites (in a scratch branch), then run `/learn:learn` again.
 
 Pass: detects the change through `git diff --stat`, refreshes only affected
 sections, bumps `verified_at_commit`.
 
 ## Scenario 8: Oversized topic
 
-Run `/learn` on a whole large repo.
+Run `/learn:learn` on a whole large repo.
 
 Pass: proposes splitting into parts and asks you to pick one, instead of trying
 to teach everything.

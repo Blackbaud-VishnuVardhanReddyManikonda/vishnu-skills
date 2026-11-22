@@ -33,6 +33,8 @@ cannot be checked.
   patterns).
 - End with an **Unknowns** list: things you looked for and could not find.
 - Do not teach, advise, or speculate about what the learner should do.
+- Never copy secrets, credentials, tokens, customer or personal data into the
+  report. If you see one, report only its `path:line` and what kind it is.
 
 ## Report format to request
 

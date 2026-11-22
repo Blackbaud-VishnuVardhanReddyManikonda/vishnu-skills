@@ -28,6 +28,11 @@ After adding the marketplace:
 
 Or use the Claude Code plugin UI to install from the `vishnu-skills` marketplace.
 
+**Shortcut (Claude Code 2.1.275 or later):** steps 1 and 2 in one command:
+```bash
+/plugin install learn --marketplace Blackbaud-VishnuVardhanReddyManikonda/vishnu-skills
+```
+
 ### Step 3: Use the skill
 ```bash
 /learn:learn <topic>
@@ -43,10 +48,12 @@ Examples:
 ## For Your Repository
 
 ### Add to .gitignore
-Keep personal learning progress private (don't commit it):
+The skill never commits or pushes anything. To keep its files from being committed by
+accident, ignore both folders (progress is private; the knowledge doc stays local
+unless you choose to share it):
 
 ```bash
-echo ".claude/learning/" >> .gitignore
+printf ".claude/learning/\ndocs/learning/\n" >> .gitignore
 ```
 
 ### Share with team members
@@ -71,9 +78,9 @@ Then commit the `.claude/settings.json` file that gets created.
 
 2. **Define the skill** in `SKILL.md` following the same format as `plugins/learn/skills/learn/SKILL.md`
 
-3. **Update versions** in:
-   - `.claude-plugin/marketplace.json` (marketplace version)
-   - `plugins/learn/.claude-plugin/plugin.json` (plugin version)
+3. **Bump the plugin `version`** in both files, so the two numbers match:
+   - `.claude-plugin/marketplace.json` (the plugin's entry)
+   - `plugins/learn/.claude-plugin/plugin.json`
 
 4. **Test locally** before publishing:
    ```bash
@@ -83,8 +90,8 @@ Then commit the `.claude/settings.json` file that gets created.
 ### Publishing Updates
 
 1. Edit skill files under `plugins/learn/skills/`
-2. Bump "version" in both:
-   - `.claude-plugin/marketplace.json`
+2. Bump the plugin `version` in both files, so the two numbers match:
+   - `.claude-plugin/marketplace.json` (the plugin's entry)
    - `plugins/learn/.claude-plugin/plugin.json`
 3. Push to GitHub
 

@@ -14,8 +14,8 @@ Contents: template, update rules, what never goes in it.
 ---
 topic: <topic>
 slug: <slug>
-doc: docs/learning/<slug>.md
-doc_commit: <commit hash the doc was verified at>
+doc: <path to the knowledge doc, default docs/learning/<slug>.md>   # Resume reads the doc from here
+doc_commit: <commit hash the doc was verified at, or "none" outside a git repo>
 started: <date>
 updated: <date>
 declared_level: nothing | some | experienced
@@ -75,4 +75,4 @@ what worked.>
 - Long code excerpts. Use `path:line`.
 
 This file is private to the learner. Do not reference its contents in the
-knowledge doc, which is shared with the team.
+knowledge doc, which the learner may choose to share with the team.
